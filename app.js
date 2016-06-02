@@ -44,7 +44,7 @@
             vm.time = day + ':' + hour + ':' + minute + ':' + second;
         }
         
-        window.setTimeout(update, 1000);
+        window.setTimeout(updateCounter, 1000);
     }
     
     updateCounter();
