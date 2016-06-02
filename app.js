@@ -39,7 +39,7 @@
             var duration = Math.floor((new Date() - startDate) / 1000);
             var second = duration % 60;
             var minute = Math.floor(duration / 60) % 60;
-            var hour = Math.floor(duration / 60 / 60) % 60;
+            var hour = Math.floor(duration / 60 / 60) % 24;
             var day = Math.floor(duration / 60 / 60 / 24);
             vm.time = day + ':' + hour + ':' + minute + ':' + second;
         }
