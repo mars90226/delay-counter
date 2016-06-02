@@ -27,7 +27,7 @@
         vm.title = title;
     }
     
-    function update() {
+    function updateCounter() {
         var startDate = new Date(params.get("startDate"));
         if (startDate === undefined) {
             var date = new Date();
@@ -47,5 +47,5 @@
         window.setTimeout(update, 1000);
     }
     
-    update();
+    updateCounter();
 })(window);

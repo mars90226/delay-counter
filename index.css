@@ -1,5 +1,7 @@
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+
 body {
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Alegreya Sans', 'cwTeXHei', sans-serif;
     background: #222;
 }
 
