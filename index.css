@@ -1,0 +1,45 @@
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+    background: #222;
+}
+
+#app {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 0 80px 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    border-radius: 300px;
+    color: #EEE;
+}
+
+#title {
+    font-weight: 400;
+    font-size: 5em;
+}
+
+#counter-label {
+    font-weight: 100;
+    font-size: 1.5em;
+    margin: 15px 0 0;
+}
+
+#counter {
+    font-weight: 100;
+    font-size: 4em;
+    margin: -15px 30px 30px;
+}
+
+hr {
+    width: 50%;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    background-image: linear-gradient(to right, #333, #ccc, #333);
+}
