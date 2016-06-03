@@ -2,13 +2,15 @@
 
 require("./index.css");
 require("./font.css");
+var bsList = require("./bs.json");
 var Vue = require('./vue.min.js');
 
-var vm = new Vue({
+var app = new Vue({
     el: '#app',
     data: {
         title: 'Delay Counter',
-        time: '0:0:0'
+        time: '0:0:0',
+        bs: 'Some bullshit here'
     }
 });
 
@@ -29,24 +31,30 @@ function parseUrl() {
 function updateCounter() {
     var startDate = new Date(params.get("startDate"));
     if (isNaN(startDate.getTime())) {
-        vm.time = "You need to start a date.";
+        app.time = "You need to start a date.";
     } else {
         var duration = Math.floor((new Date() - startDate) / 1000);
         var second = duration % 60;
         var minute = Math.floor(duration / 60) % 60;
         var hour = Math.floor(duration / 60 / 60) % 24;
         var day = Math.floor(duration / 60 / 60 / 24);
-        vm.time = day + ':' + hour + ':' + minute + ':' + second;
+        app.time = day + ':' + hour + ':' + minute + ':' + second;
     }
 
     window.setTimeout(updateCounter, 1000);
 }
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
 function init(params) {
     var title = params.get("title");
     if (title !== undefined) {
-        vm.title = title;
+        app.title = title;
     }
+    
+    app.bs = bsList[getRandomInt(0, bsList.length)];
 }
 
 init(params);
