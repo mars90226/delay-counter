@@ -1,6 +1,8 @@
 (function (exports) {
     'use strict';
     
+    require("./index.css");
+    
     exports.vm = new Vue({
         el: '#app',
         data: {
@@ -29,12 +31,8 @@
     
     function update() {
         var startDate = new Date(params.get("startDate"));
-        if (startDate === undefined) {
-            var date = new Date();
-            var hour = date.getHours();
-            var minute = date.getMinutes();
-            var second = date.getSeconds();
-            vm.time = hour + ':' + minute + ':' + second;
+        if (isNaN(startDate.getTime())) {
+            vm.time = "You need to start a date.";
         } else {
             var duration = Math.floor((new Date() - startDate) / 1000);
             var second = duration % 60;

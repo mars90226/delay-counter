@@ -1,0 +1,24 @@
+{
+  "name": "delay-counter",
+  "version": "1.0.0",
+  "description": "Count the delay",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mars90226/delay-counter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mars90226/delay-counter/issues"
+  },
+  "homepage": "https://github.com/mars90226/delay-counter#readme",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
+  }
+}
