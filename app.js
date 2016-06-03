@@ -29,7 +29,7 @@
         vm.title = title;
     }
     
-    function update() {
+    function updateCounter() {
         var startDate = new Date(params.get("startDate"));
         if (isNaN(startDate.getTime())) {
             vm.time = "You need to start a date.";
@@ -37,13 +37,13 @@
             var duration = Math.floor((new Date() - startDate) / 1000);
             var second = duration % 60;
             var minute = Math.floor(duration / 60) % 60;
-            var hour = Math.floor(duration / 60 / 60) % 60;
+            var hour = Math.floor(duration / 60 / 60) % 24;
             var day = Math.floor(duration / 60 / 60 / 24);
             vm.time = day + ':' + hour + ':' + minute + ':' + second;
         }
         
-        window.setTimeout(update, 1000);
+        window.setTimeout(updateCounter, 1000);
     }
     
-    update();
+    updateCounter();
 })(window);
